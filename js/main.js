@@ -1,16 +1,39 @@
 // Constructors
 // Only add code to *THIS* section!
 
-///
-///
-///
-///
+let Dog = function(obj) {
+
+  obj = obj || {};
+
+  this.status = 'normal';
+  this.color = obj.color;
+  this.hungry = (obj.hungry !== undefined) ? obj.hungry : true;
+  this.owner = obj.owner;
+};
+
+let Human = function(obj) {
+
+  obj = obj || {};
+
+  this.cool = (obj.cool !== undefined) ? obj.cool : false;
+  
+  this.pet = function(animal){
+     animal.status = 'happy';
+  };
+
+  this.feed = function(animal){
+    animal.hungry = false;
+  };
+ 
+ };
+
+
 
 // Do not ADD or MODIFY code below this line :)
 // Dogs
 let sadie = new Dog({
-  color: 'black',
-  hungry: false,
+  color: 'black', 
+  hungry: false 
 });
 
 let moonshine = new Dog({
